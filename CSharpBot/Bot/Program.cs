@@ -11,7 +11,7 @@ namespace Bot
             string text = File.ReadAllLines(file)[0];
             int port = int.Parse(text);
 
-            RLBotDotNet.BotManager<Bot> botManager = new RLBotDotNet.BotManager<Bot>(0);
+            RLBotDotNet.BotManager<FrostyBot> botManager = new RLBotDotNet.BotManager<FrostyBot>(0);
             // Start the server on the port given in the port.cfg file.
             botManager.Start(port);
         }
