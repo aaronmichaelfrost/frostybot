@@ -87,7 +87,7 @@ namespace Bot
             agent.SteerTo(agent.field.ballLocation);
             if (Vector3.Distance(agent.transform.location, agent.field.ballLocation) < 1000 && agent.field.ballLocation.Y - 100 < agent.transform.location.Y)
             {
-
+                
                 agent.controller.Boost = true;
   
             }
@@ -376,6 +376,7 @@ namespace Bot
         public override Controller GetOutput(rlbot.flat.GameTickPacket gameTickPacket)
         {
             packet = new Packet(gameTickPacket);
+
 
             CollectInfo();
 
